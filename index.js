@@ -8,7 +8,7 @@ const handler = createHandler({ path: "/webhook", secret: "tars-secret" });
 
 http.createServer(function(req, res) {
   handler(req, res, function() {
-    res.statusCode = 404;
+    res.statusCode = 403;
     res.end("no such location");
   });
 }).listen(80);
