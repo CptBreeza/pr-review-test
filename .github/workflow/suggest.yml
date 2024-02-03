@@ -1,0 +1,14 @@
+name: Assist Pull Request Reviewing
+on:
+  pull_request_review_comment:
+    types:
+      - created
+jobs:
+  suggest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Suggest
+        uses: CptBreeza/gh-pr-reviewer-assistant
+        with:
+          pull_request_id: ${{ github.event.pull_request.node_id }}
+          comment_id: ${{ github.comment.node_id }}
