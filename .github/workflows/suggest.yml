@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Suggest
-        uses: CptBreeza/gh-pr-reviewer-assistant
+        uses: CptBreeza/gh-pr-reviewer-assistant@4cc980c36c003ea2887104ed37f41cf760156296
         with:
           pull_request_id: ${{ github.event.pull_request.node_id }}
           comment_id: ${{ github.comment.node_id }}
